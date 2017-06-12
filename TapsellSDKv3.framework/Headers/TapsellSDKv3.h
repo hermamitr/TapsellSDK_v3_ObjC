@@ -22,5 +22,6 @@ FOUNDATION_EXPORT const unsigned char TapsellSDKv3VersionString[];
 #import <TapsellSDKv3/TSAdRequestOptions.h>
 #import <TapsellSDKv3/TSAdShowOptions.h>
 #import <TapsellSDKv3/TSConfiguration.h>
+#import <TapsellSDKv3/TapsellExtraPlatformsController.h>
 
 

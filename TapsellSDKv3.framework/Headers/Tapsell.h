@@ -25,6 +25,10 @@
 
 + (void)setDebugMode:(BOOL)debugMode;
 
++ (NSString*) getAppUserId;
+
++ (void)setAppUserId:(NSString*)appUserId;
+
 + (void)requestAdForZone:(NSString*)zoneId
            onAdAvailable: (void (^)(TapsellAd * ad)) onAdAvailable
          onNoAdAvailable:(void (^)()) onNoAdAvailable

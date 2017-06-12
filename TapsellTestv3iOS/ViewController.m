@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
-    [Tapsell initializeWithAppKey:@"ljrdhscbkpjrkslfljrjpgtbjjfdajgrlihaocnqsnplgmsckssqkogsfmfatlbjelbfcd" andConfig:config];
+    [Tapsell initializeWithAppKey:@"mioeqormndnommjqoapteerhkhccdttralkisksfabprknrthaagbofcohiojadbiqhcrc" andConfig:config];
     
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
@@ -31,20 +31,21 @@
     [requestOptions setCacheType:CacheTypeCached];
     
     [Tapsell setAdShowFinishedCallback:^(TapsellAd *ad, BOOL completed) {
+        NSLog(@"completed? %d",completed);
         if([ad isRewardedAd] && completed)
         {
             NSLog(@"Congratulations! 1 coin awarded.");
         }
     }];
     
-    [Tapsell requestAdForZone:@"5913110746846551e1340acf"
+    [Tapsell requestAdForZone:@"592be81646846575539c6a25"
                    andOptions:requestOptions
                 onAdAvailable:^(TapsellAd *ad){
                     NSLog(@"AdAvailable");
                     TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
                     [showOptions setOrientation:OrientationUnlocked];
                     [showOptions setBackDisabled:YES];
-                    [showOptions setShowDialoged:YES];
+                    [showOptions setShowDialoge:YES];
                     [ad showWithOptions:showOptions];
                 }
               onNoAdAvailable:^{

@@ -27,10 +27,11 @@ typedef enum Orientation : NSInteger {
 
 -(Orientation) getOrientation;
 -(void) setOrientation:(Orientation)orientation;
+-(void) setOrientationNumber:(NSNumber*)orientation;
 -(BOOL) getBackDisabled;
 -(void) setBackDisabled:(BOOL)backDisabled;
--(BOOL) getShowDialoged;
--(void) setShowDialoged:(BOOL)showDisabled;
+-(BOOL) getShowDialoge;
+-(void) setShowDialoge:(BOOL)showDisabled;
 
 @end
 

@@ -13,18 +13,18 @@
 		B2F1DD211EDC1B39000D9CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD1F1EDC1B39000D9CA4 /* Main.storyboard */; };
 		B2F1DD231EDC1B39000D9CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */; };
 		B2F1DD261EDC1B39000D9CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD241EDC1B39000D9CA4 /* LaunchScreen.storyboard */; };
-		B2F1DD571EDC367F000D9CA4 /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F1DD531EDC2B84000D9CA4 /* TapsellSDKv3.framework */; };
-		B2F1DD581EDC367F000D9CA4 /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2F1DD531EDC2B84000D9CA4 /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2F907231EEED0840012299D /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F907211EEED07F0012299D /* TapsellSDKv3.framework */; };
+		B2F907241EEED0840012299D /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2F907211EEED07F0012299D /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B2F1DD591EDC367F000D9CA4 /* Embed Frameworks */ = {
+		B24FB1FB1EE7FFEE0038808E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2F1DD581EDC367F000D9CA4 /* TapsellSDKv3.framework in Embed Frameworks */,
+				B2F907241EEED0840012299D /* TapsellSDKv3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +42,7 @@
 		B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F1DD251EDC1B39000D9CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F1DD271EDC1B39000D9CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2F1DD531EDC2B84000D9CA4 /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
+		B2F907211EEED07F0012299D /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F1DD571EDC367F000D9CA4 /* TapsellSDKv3.framework in Frameworks */,
+				B2F907231EEED0840012299D /* TapsellSDKv3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		B2F1DD0A1EDC1B39000D9CA4 = {
 			isa = PBXGroup;
 			children = (
-				B2F1DD531EDC2B84000D9CA4 /* TapsellSDKv3.framework */,
+				B2F907211EEED07F0012299D /* TapsellSDKv3.framework */,
 				B2F1DD151EDC1B39000D9CA4 /* TapsellTestv3iOS */,
 				B2F1DD141EDC1B39000D9CA4 /* Products */,
 			);
@@ -108,7 +108,7 @@
 				B2F1DD0F1EDC1B39000D9CA4 /* Sources */,
 				B2F1DD101EDC1B39000D9CA4 /* Frameworks */,
 				B2F1DD111EDC1B39000D9CA4 /* Resources */,
-				B2F1DD591EDC367F000D9CA4 /* Embed Frameworks */,
+				B24FB1FB1EE7FFEE0038808E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,6 +301,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TapsellTestv3iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ir.tapsell.TapsellTestv3iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,6 +318,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TapsellTestv3iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ir.tapsell.TapsellTestv3iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,6 +344,7 @@
 				B2F1DD2C1EDC1B39000D9CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
