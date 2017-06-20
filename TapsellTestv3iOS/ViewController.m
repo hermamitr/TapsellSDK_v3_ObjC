@@ -13,6 +13,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) TapsellAd * tapsellAd;
+
 @end
 
 @implementation ViewController
@@ -26,9 +28,12 @@
     
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
+    [self.btnShowAd setHidden:YES];
+    self.btnRequestAd.titleLabel. numberOfLines = 0; // Dynamic number of lines
+    self.btnRequestAd.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
-    TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
-    [requestOptions setCacheType:CacheTypeCached];
+//    TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
+//    [requestOptions setCacheType:CacheTypeCached];
     
     [Tapsell setAdShowFinishedCallback:^(TapsellAd *ad, BOOL completed) {
         NSLog(@"completed? %d",completed);
@@ -38,25 +43,82 @@
         }
     }];
     
-    [Tapsell requestAdForZone:@"592be81646846575539c6a25"
-                   andOptions:requestOptions
-                onAdAvailable:^(TapsellAd *ad){
-                    NSLog(@"AdAvailable");
-                    TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
-                    [showOptions setOrientation:OrientationUnlocked];
-                    [showOptions setBackDisabled:YES];
-                    [showOptions setShowDialoge:YES];
-                    [ad showWithOptions:showOptions];
-                }
-              onNoAdAvailable:^{
-                  NSLog(@"NoAdAvailable");
-              }
-                      onError:^(NSString* error){
-                          NSLog(@"%@", [NSString stringWithFormat:@"No ad available, error:%@",error]);
-                      }
-                   onExpiring:^(TapsellAd *ad){
-                       NSLog(@"Expiring");
-                   }];
+//    [Tapsell requestAdForZone:@"592be81646846575539c6a25"
+//                   andOptions:requestOptions
+//                onAdAvailable:^(TapsellAd *ad){
+//                    NSLog(@"AdAvailable");
+//                    TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
+//                    [showOptions setOrientation:OrientationUnlocked];
+//                    [showOptions setBackDisabled:YES];
+//                    [showOptions setShowDialoge:YES];
+//                    [ad showWithOptions:showOptions];
+//                }
+//              onNoAdAvailable:^{
+//                  NSLog(@"NoAdAvailable");
+//              }
+//                      onError:^(NSString* error){
+//                          NSLog(@"%@", [NSString stringWithFormat:@"No ad available, error:%@",error]);
+//                      }
+//                   onExpiring:^(TapsellAd *ad){
+//                       NSLog(@"Expiring");
+//                   }];
+}
+
+- (IBAction)requestButtonClicked:(id)sender{
+    NSLog(@"requestButtonClicked");
+    if(self.tapsellAd==nil)
+    {
+        [self.btnRequestAd setTitle:@"Fetching..." forState:UIControlStateNormal];
+        TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
+        [requestOptions setCacheType:CacheTypeCached];
+        [Tapsell requestAdForZone:@"592be81646846575539c6a25"
+                       andOptions:requestOptions
+                    onAdAvailable:^(TapsellAd *ad){
+                        NSLog(@"AdAvailable");
+                        self.tapsellAd = ad;
+                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            
+                            [self.btnRequestAd setTitle:@"Ready" forState:UIControlStateNormal];
+                            [self.btnShowAd setHidden:NO];
+                            
+                        }];
+                    }
+                  onNoAdAvailable:^{
+                      NSLog(@"NoAdAvailable");
+                      [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                          
+                          [self.btnRequestAd setTitle:@"No ad available,\nClick to Retry" forState:UIControlStateNormal];
+                          
+                      }];
+                  }
+                          onError:^(NSString* error){
+                              NSLog(@"%@", [NSString stringWithFormat:@"No ad available, error:%@",error]);
+                              [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                  
+                                  [self.btnRequestAd setTitle:@"Error occured,\nClick to Retry" forState:UIControlStateNormal];
+                                  
+                              }];
+                          }
+                       onExpiring:^(TapsellAd *ad){
+                           NSLog(@"Expiring");
+                       }];
+    }
+//    [self.btnShowAd setHidden:YES];
+}
+
+- (IBAction)showButtonClicked:(id)sender{
+    NSLog(@"showButtonClicked");
+    if(self.tapsellAd!=nil)
+    {
+        TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
+        [showOptions setOrientation:OrientationUnlocked];
+        [showOptions setBackDisabled:YES];
+        [showOptions setShowDialoge:YES];
+        [self.tapsellAd showWithOptions:showOptions];
+        self.tapsellAd = nil;
+        [self.btnShowAd setHidden:YES];
+        [self.btnRequestAd setTitle:@"Request Ad" forState:UIControlStateNormal];
+    }
 }
 
 
@@ -64,6 +126,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

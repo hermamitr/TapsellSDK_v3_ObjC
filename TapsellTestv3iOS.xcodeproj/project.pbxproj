@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24B6DE31EF9085D00FCEA3E /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24B6DE11EF9085900FCEA3E /* TapsellSDKv3.framework */; };
+		B24B6DE41EF9085D00FCEA3E /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B24B6DE11EF9085900FCEA3E /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2F1DD181EDC1B39000D9CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD171EDC1B39000D9CA4 /* main.m */; };
 		B2F1DD1B1EDC1B39000D9CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1A1EDC1B39000D9CA4 /* AppDelegate.m */; };
 		B2F1DD1E1EDC1B39000D9CA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1D1EDC1B39000D9CA4 /* ViewController.m */; };
 		B2F1DD211EDC1B39000D9CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD1F1EDC1B39000D9CA4 /* Main.storyboard */; };
 		B2F1DD231EDC1B39000D9CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */; };
 		B2F1DD261EDC1B39000D9CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD241EDC1B39000D9CA4 /* LaunchScreen.storyboard */; };
-		B2F907231EEED0840012299D /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F907211EEED07F0012299D /* TapsellSDKv3.framework */; };
-		B2F907241EEED0840012299D /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2F907211EEED07F0012299D /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2F907241EEED0840012299D /* TapsellSDKv3.framework in Embed Frameworks */,
+				B24B6DE41EF9085D00FCEA3E /* TapsellSDKv3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B24B6DE11EF9085900FCEA3E /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 		B2F1DD131EDC1B39000D9CA4 /* TapsellTestv3iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapsellTestv3iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F1DD171EDC1B39000D9CA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F1DD191EDC1B39000D9CA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F1DD251EDC1B39000D9CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F1DD271EDC1B39000D9CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2F907211EEED07F0012299D /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F907231EEED0840012299D /* TapsellSDKv3.framework in Frameworks */,
+				B24B6DE31EF9085D00FCEA3E /* TapsellSDKv3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		B2F1DD0A1EDC1B39000D9CA4 = {
 			isa = PBXGroup;
 			children = (
-				B2F907211EEED07F0012299D /* TapsellSDKv3.framework */,
+				B24B6DE11EF9085900FCEA3E /* TapsellSDKv3.framework */,
 				B2F1DD151EDC1B39000D9CA4 /* TapsellTestv3iOS */,
 				B2F1DD141EDC1B39000D9CA4 /* Products */,
 			);

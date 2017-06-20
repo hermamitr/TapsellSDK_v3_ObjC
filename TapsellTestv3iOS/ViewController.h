@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnRequestAd;
+@property (weak, nonatomic) IBOutlet UIButton *btnShowAd;
+- (IBAction)requestButtonClicked:(id)sender;
+- (IBAction)showButtonClicked:(id)sender;
 
 @end
 
