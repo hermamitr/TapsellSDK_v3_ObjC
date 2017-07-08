@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
     [Tapsell initializeWithAppKey:@"mioeqormndnommjqoapteerhkhccdttralkisksfabprknrthaagbofcohiojadbiqhcrc" andConfig:config];
@@ -32,9 +31,6 @@
     self.btnRequestAd.titleLabel. numberOfLines = 0; // Dynamic number of lines
     self.btnRequestAd.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
-//    TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
-//    [requestOptions setCacheType:CacheTypeCached];
-    
     [Tapsell setAdShowFinishedCallback:^(TapsellAd *ad, BOOL completed) {
         NSLog(@"completed? %d",completed);
         if([ad isRewardedAd] && completed)
@@ -42,26 +38,6 @@
             NSLog(@"Congratulations! 1 coin awarded.");
         }
     }];
-    
-//    [Tapsell requestAdForZone:@"592be81646846575539c6a25"
-//                   andOptions:requestOptions
-//                onAdAvailable:^(TapsellAd *ad){
-//                    NSLog(@"AdAvailable");
-//                    TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
-//                    [showOptions setOrientation:OrientationUnlocked];
-//                    [showOptions setBackDisabled:YES];
-//                    [showOptions setShowDialoge:YES];
-//                    [ad showWithOptions:showOptions];
-//                }
-//              onNoAdAvailable:^{
-//                  NSLog(@"NoAdAvailable");
-//              }
-//                      onError:^(NSString* error){
-//                          NSLog(@"%@", [NSString stringWithFormat:@"No ad available, error:%@",error]);
-//                      }
-//                   onExpiring:^(TapsellAd *ad){
-//                       NSLog(@"Expiring");
-//                   }];
 }
 
 - (IBAction)requestButtonClicked:(id)sender{
@@ -112,9 +88,13 @@
     {
         TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
         [showOptions setOrientation:OrientationUnlocked];
-        [showOptions setBackDisabled:YES];
+        [showOptions setBackDisabled:NO];
         [showOptions setShowDialoge:YES];
-        [self.tapsellAd showWithOptions:showOptions];
+        [self.tapsellAd showWithOptions:showOptions andOpenedCallback:^(TapsellAd * _Nullable ad) {
+            NSLog(@"Opened!");
+        } andClosedCallback:^(TapsellAd * _Nullable ad) {
+            NSLog(@"Closed!");
+        }];
         self.tapsellAd = nil;
         [self.btnShowAd setHidden:YES];
         [self.btnRequestAd setTitle:@"Request Ad" forState:UIControlStateNormal];

@@ -24,6 +24,10 @@
 
 + (void) onExpiring:(TapsellAd* _Nullable)ad;
 
++ (void) onOpened:(TapsellAd* _Nullable)ad;
+
++ (void) onClosed:(TapsellAd* _Nullable)ad;
+
 + (void)initializeWithAppKey:(NSString* _Nonnull)appKey;
 
 + (BOOL)isDebugMode;
