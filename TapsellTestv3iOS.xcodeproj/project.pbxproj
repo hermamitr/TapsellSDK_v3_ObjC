@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		B20118AB1FB31FF0006AC530 /* NativeAd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20118A91FB31FF0006AC530 /* NativeAd.storyboard */; };
 		B20118AE1FB32010006AC530 /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B20118AD1FB32010006AC530 /* NativeAdViewController.m */; };
-		B22C16DF1FC6B000004EA8AE /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22C16DE1FC6AFFF004EA8AE /* TapsellSDKv3.framework */; };
-		B22C16E01FC6B000004EA8AE /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B22C16DE1FC6AFFF004EA8AE /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B22C16F71FC6B9F2004EA8AE /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22C16F61FC6B9F2004EA8AE /* TapsellSDKv3.framework */; };
+		B22C16F81FC6B9F2004EA8AE /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B22C16F61FC6B9F2004EA8AE /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2F1DD181EDC1B39000D9CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD171EDC1B39000D9CA4 /* main.m */; };
 		B2F1DD1B1EDC1B39000D9CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1A1EDC1B39000D9CA4 /* AppDelegate.m */; };
 		B2F1DD1E1EDC1B39000D9CA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1D1EDC1B39000D9CA4 /* ViewController.m */; };
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B22C16E01FC6B000004EA8AE /* TapsellSDKv3.framework in Embed Frameworks */,
+				B22C16F81FC6B9F2004EA8AE /* TapsellSDKv3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,7 +37,7 @@
 		B20118AA1FB31FF0006AC530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NativeAd.storyboard; sourceTree = "<group>"; };
 		B20118AC1FB32010006AC530 /* NativeAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
 		B20118AD1FB32010006AC530 /* NativeAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
-		B22C16DE1FC6AFFF004EA8AE /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
+		B22C16F61FC6B9F2004EA8AE /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 		B2B1305A1FA74E8800629CC7 /* TapsellTestv3iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TapsellTestv3iOS.entitlements; sourceTree = "<group>"; };
 		B2E6FA611FA49DBB0089D01E /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TapsellSDKv3.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TapsellSDKv3-bcwsdcntuwqlsfayrsxlteqwsdbq/Build/Products/Release-universal/iOS/TapsellSDKv3.framework"; sourceTree = "<group>"; };
 		B2F1DD131EDC1B39000D9CA4 /* TapsellTestv3iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapsellTestv3iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22C16DF1FC6B000004EA8AE /* TapsellSDKv3.framework in Frameworks */,
+				B22C16F71FC6B9F2004EA8AE /* TapsellSDKv3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 		B2F1DD0A1EDC1B39000D9CA4 = {
 			isa = PBXGroup;
 			children = (
-				B22C16DE1FC6AFFF004EA8AE /* TapsellSDKv3.framework */,
+				B22C16F61FC6B9F2004EA8AE /* TapsellSDKv3.framework */,
 				B2F1DD151EDC1B39000D9CA4 /* TapsellTestv3iOS */,
 				B2F1DD141EDC1B39000D9CA4 /* Products */,
 				B2E6FA601FA49DBB0089D01E /* Frameworks */,
