@@ -10,20 +10,26 @@
 
 #import <TapsellSDKv3/TapsellSDKv3.h>
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "NativeAdViewController.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) TapsellAd * tapsellAd;
+@property (strong, nonatomic) TapsellAd * tapsellAd;
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.bannerAdView loadAdWithZoneId:@"59a27ab94684655433e74ef8" andBannerType:BANNER_250x250];
+    
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
-    [Tapsell initializeWithAppKey:@"mioeqormndnommjqoapteerhkhccdttralkisksfabprknrthaagbofcohiojadbiqhcrc" andConfig:config];
+    [Tapsell initializeWithAppKey:@"rashssjnjiaeqqeihgjdsihajkbkqgeqqdoftpafmlcoofdflejgmttlercbsdfbnjnjqs" andConfig:config];
     
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
@@ -38,6 +44,20 @@
             NSLog(@"Congratulations! 1 coin awarded.");
         }
     }];
+
+//    [Tapsell requestNativeBannerAdForZone:@"58aa98994684653c04d9b22d"
+//                      onAdAvailable:^(TapsellAd* ad) {}
+//                    onNoAdAvailable:^(void){}
+//                            onError:^(NSString* error){
+//                                NSLog(@"ERROR RECEIVED IN MAIN APP");
+//                            }];
+//
+//    [Tapsell requestNativeVideoAdForZone:@"58aa9d0d4684653c04da4e5e"
+//                            onAdAvailable:^(TapsellAd* ad) {}
+//                          onNoAdAvailable:^(void){}
+//                                  onError:^(NSString* error){
+//                                      NSLog(@"ERROR RECEIVED IN MAIN APP");
+//                                  }];
 }
 
 - (IBAction)requestButtonClicked:(id)sender{
@@ -46,11 +66,12 @@
     {
         [self.btnRequestAd setTitle:@"Fetching..." forState:UIControlStateNormal];
         TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
-        [requestOptions setCacheType:CacheTypeCached];
-        [Tapsell requestAdForZone:@"592be81646846575539c6a25"
+        [requestOptions setCacheType:CacheTypeStreamed];
+        [Tapsell requestAdForZone:@"586e4ed1bc5c28712bd8d50c"
                        andOptions:requestOptions
                     onAdAvailable:^(TapsellAd *ad){
                         NSLog(@"AdAvailable");
+//                        NSLog([ad getId]);
                         self.tapsellAd = ad;
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             
@@ -84,23 +105,40 @@
 
 - (IBAction)showButtonClicked:(id)sender{
     NSLog(@"showButtonClicked");
+    
     if(self.tapsellAd!=nil)
     {
         TSAdShowOptions* showOptions = [[TSAdShowOptions alloc] init];
         [showOptions setOrientation:OrientationUnlocked];
         [showOptions setBackDisabled:NO];
         [showOptions setShowDialoge:YES];
-        [self.tapsellAd showWithOptions:showOptions andOpenedCallback:^(TapsellAd * _Nullable ad) {
-            NSLog(@"Opened!");
-        } andClosedCallback:^(TapsellAd * _Nullable ad) {
-            NSLog(@"Closed!");
-        }];
+        [self.tapsellAd showWithOptions:showOptions
+                      andOpenedCallback:^(TapsellAd * _Nullable ad) {
+                          NSLog(@"Opened!");
+                      }
+                      andClosedCallback:^(TapsellAd * _Nullable ad) {
+                          NSLog(@"Closed!");
+                      }
+         ];
         self.tapsellAd = nil;
         [self.btnShowAd setHidden:YES];
         [self.btnRequestAd setTitle:@"Request Ad" forState:UIControlStateNormal];
     }
 }
 
+- (IBAction)nativeAdClicked:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"NativeAd" bundle:nil];
+    NativeAdViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"NativeAdViewController"];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+-(void) tsBannerAdNoAdAvailable {
+    NSLog(@"BANNER_AD: No Banner Ad Available");
+}
+
+-(void) tsBannerAdHideBannerAdView {
+    NSLog(@"BANNER_AD: Banner Ad view is hidden!");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

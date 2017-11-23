@@ -46,14 +46,17 @@
 
 - (void)removeCachedAd:(TapsellAd* _Nullable) ad;
 
-- (void)showAd:(NSString* _Nonnull)adId withOptions:(TSAdShowOptions* _Nullable)showOptions;
+- (void)showAd:(NSString* _Nonnull)adId
+   withOptions:(TSAdShowOptions* _Nullable)showOptions;
 
 + (NSString* _Nullable)getVersion;
 
 - (void) setPlatformControllerOnAdAvailable: (void (^_Nullable)(TapsellAd * _Nullable ad)) onAdAvailable
-               onNoAdAvailable:(void (^_Nullable)(NSString* _Nullable zoneId)) onNoAdAvailable
-                       onError:(void (^_Nullable)(NSString* _Nullable error, NSString* _Nullable zoneId)) onError
-                    onExpiring:(void (^_Nullable)(TapsellAd * _Nullable ad)) onExpiring;
+                            onNoAdAvailable:(void (^_Nullable)(NSString* _Nullable zoneId)) onNoAdAvailable
+                                    onError:(void (^_Nullable)(NSString* _Nullable error, NSString* _Nullable zoneId)) onError
+                                 onExpiring:(void (^_Nullable)(TapsellAd * _Nullable ad)) onExpiring
+                                   onOpened:(void (^_Nullable)(TapsellAd * _Nullable ad)) onOpened
+                                   onClosed:(void (^_Nullable)(TapsellAd * _Nullable ad)) onClosed;
 
 + (void)setAdShowFinishedCallback: (void (^_Nullable)(TapsellAd * _Nullable ad, BOOL completed)) onAdShowFinished;
 

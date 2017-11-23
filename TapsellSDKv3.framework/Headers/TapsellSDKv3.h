@@ -16,6 +16,9 @@ FOUNDATION_EXPORT const unsigned char TapsellSDKv3VersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TapsellSDKv3/PublicHeader.h>
 
+#import <TapsellSDKv3/TSBannerAdView.h>
+#import <TapsellSDKv3/TSNativeBannerAdView.h>
+#import <TapsellSDKv3/TSNativeVideoAdView.h>
 #import <TapsellSDKv3/Tapsell.h>
 #import <TapsellSDKv3/TapsellAd.h>
 #import <TapsellSDKv3/TapsellVAST.h>

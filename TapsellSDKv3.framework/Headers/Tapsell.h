@@ -13,10 +13,12 @@
 #import "TSConfiguration.h"
 #import "TSAdRequestOptions.h"
 #import "TapsellAd.h"
+#import "TSNativeBannerAdView.h"
+#import "TSNativeVideoAdView.h"
 
 @interface Tapsell : NSObject
 
-+ (void)initializeWithAppKey:(NSString* )appKey;
++ (void)initializeWithAppKey:(NSString*)appKey;
 
 + (void)initializeWithAppKey:(NSString* )appKey
                    andConfig:(TSConfiguration *)config;
@@ -42,6 +44,18 @@
          onNoAdAvailable:(void (^)()) onNoAdAvailable
                  onError:(void (^)(NSString* error)) onError
               onExpiring:(void (^)(TapsellAd * ad)) onExpiring;
+
++(void) requestNativeBannerAdForZone:(NSString*_Nullable)zoneId
+                    andContainerView:(TSNativeBannerAdView*_Nullable) nativeBanner
+                     onRequestFilled:(void (^_Nullable)()) onRequestFilled
+                     onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable
+                             onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
+
++(void) requestNativeVideoAdForZone:(NSString*_Nonnull )zoneId
+                   andContainerView:(TSNativeVideoAdView*_Nullable) nativeVideo
+                    onRequestFilled: (void (^_Nullable)()) onRequestFilled
+                    onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable
+                            onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
 
 + (void)setAdShowFinishedCallback: (void (^)(TapsellAd * ad, BOOL completed)) onAdShowFinished;
 
