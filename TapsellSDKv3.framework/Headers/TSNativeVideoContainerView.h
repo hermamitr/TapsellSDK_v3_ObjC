@@ -10,6 +10,4 @@
 
 @interface TSNativeVideoContainerView : UIView
 
--(void) setUrl:(NSString*) url;
-
 @end

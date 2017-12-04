@@ -15,10 +15,10 @@
 @property(nonatomic, readonly) NSInteger logoImageTag;
 @property(nonatomic, readonly) NSInteger callToActionButtonTag;
 
--(void) loadTitleIntoLabel:(NSString*)title;
--(void) loadDescriptionIntoLabel:(NSString*)description;
--(void) loadLogoIntoImage:(NSString*)logoUrl;
--(void) loadCallToActionIntoButton:(NSString*)callToActionText;
+-(BOOL) loadTitleIntoLabel:(NSString*)title;
+-(BOOL) loadDescriptionIntoLabel:(NSString*)description;
+-(BOOL) loadLogoIntoImage:(NSString*)logoUrl;
+-(BOOL) loadCallToActionIntoButton:(NSString*)callToActionText;
 -(void) commonInit;
 
 @end

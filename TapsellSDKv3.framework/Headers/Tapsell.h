@@ -51,6 +51,11 @@
                      onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable
                              onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
 
++(void) requestNativeBannerAdForZone:(NSString*_Nullable)zoneId
+                     onAdAvailable:(void (^_Nullable)()) onRequestFilled
+                     onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable
+                             onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
+
 +(void) requestNativeVideoAdForZone:(NSString*_Nonnull )zoneId
                    andContainerView:(TSNativeVideoAdView*_Nullable) nativeVideo
                     onRequestFilled: (void (^_Nullable)()) onRequestFilled
