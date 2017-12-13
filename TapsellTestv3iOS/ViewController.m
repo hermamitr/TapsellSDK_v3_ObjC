@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "NativeAdViewController.h"
+#import "NativeAdListController.h"
 
 @interface ViewController ()
 
@@ -30,7 +31,7 @@
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
     [Tapsell initializeWithAppKey:@"rashssjnjiaeqqeihgjdsihajkbkqgeqqdoftpafmlcoofdflejgmttlercbsdfbnjnjqs" andConfig:config];
-    
+ 
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
     [self.btnShowAd setHidden:YES];
@@ -44,20 +45,6 @@
             NSLog(@"Congratulations! 1 coin awarded.");
         }
     }];
-
-//    [Tapsell requestNativeBannerAdForZone:@"58aa98994684653c04d9b22d"
-//                      onAdAvailable:^(TapsellAd* ad) {}
-//                    onNoAdAvailable:^(void){}
-//                            onError:^(NSString* error){
-//                                NSLog(@"ERROR RECEIVED IN MAIN APP");
-//                            }];
-//
-//    [Tapsell requestNativeVideoAdForZone:@"58aa9d0d4684653c04da4e5e"
-//                            onAdAvailable:^(TapsellAd* ad) {}
-//                          onNoAdAvailable:^(void){}
-//                                  onError:^(NSString* error){
-//                                      NSLog(@"ERROR RECEIVED IN MAIN APP");
-//                                  }];
 }
 
 - (IBAction)requestButtonClicked:(id)sender{
@@ -127,8 +114,16 @@
 }
 
 - (IBAction)nativeAdClicked:(id)sender {
+    NSLog(@"NATIVE CLICKED");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"NativeAd" bundle:nil];
     NativeAdViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"NativeAdViewController"];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (IBAction)nativeAdListClicked:(id)sender {
+    NSLog(@"LIST CLICKED");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"NativeAdList" bundle:nil];
+    NativeAdListController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"NativeAdListController"];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

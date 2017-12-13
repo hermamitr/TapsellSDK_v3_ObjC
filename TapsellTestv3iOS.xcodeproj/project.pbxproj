@@ -9,14 +9,20 @@
 /* Begin PBXBuildFile section */
 		B20118AB1FB31FF0006AC530 /* NativeAd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20118A91FB31FF0006AC530 /* NativeAd.storyboard */; };
 		B20118AE1FB32010006AC530 /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B20118AD1FB32010006AC530 /* NativeAdViewController.m */; };
+		B21321221FE104CF0028336D /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21321211FE104CE0028336D /* TapsellSDKv3.framework */; };
+		B21321231FE104CF0028336D /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B21321211FE104CE0028336D /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2BDFF3B1FE119BF009D6360 /* NativeVideoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BDFF3A1FE119BF009D6360 /* NativeVideoTableCell.xib */; };
+		B2BDFF3E1FE11B48009D6360 /* NativeVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BDFF3D1FE11B48009D6360 /* NativeVideoTableViewCell.m */; };
+		B2F007BF1FDEBE2400D0062F /* NativeAdListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F007BE1FDEBE2400D0062F /* NativeAdListController.m */; };
+		B2F007C21FDEBE7400D0062F /* NativeAdList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F007C01FDEBE7400D0062F /* NativeAdList.storyboard */; };
+		B2F007C41FDEDB5C00D0062F /* NativeBannerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F007C31FDEDB5C00D0062F /* NativeBannerTableCell.xib */; };
+		B2F007C71FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F007C61FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.m */; };
 		B2F1DD181EDC1B39000D9CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD171EDC1B39000D9CA4 /* main.m */; };
 		B2F1DD1B1EDC1B39000D9CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1A1EDC1B39000D9CA4 /* AppDelegate.m */; };
 		B2F1DD1E1EDC1B39000D9CA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1DD1D1EDC1B39000D9CA4 /* ViewController.m */; };
 		B2F1DD211EDC1B39000D9CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD1F1EDC1B39000D9CA4 /* Main.storyboard */; };
 		B2F1DD231EDC1B39000D9CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */; };
 		B2F1DD261EDC1B39000D9CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F1DD241EDC1B39000D9CA4 /* LaunchScreen.storyboard */; };
-		B2F2CABF1FD5A9FB00155489 /* TapsellSDKv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2CABE1FD5A9FB00155489 /* TapsellSDKv3.framework */; };
-		B2F2CAC01FD5A9FB00155489 /* TapsellSDKv3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2CABE1FD5A9FB00155489 /* TapsellSDKv3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2F2CAC01FD5A9FB00155489 /* TapsellSDKv3.framework in Embed Frameworks */,
+				B21321231FE104CF0028336D /* TapsellSDKv3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,8 +43,18 @@
 		B20118AA1FB31FF0006AC530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NativeAd.storyboard; sourceTree = "<group>"; };
 		B20118AC1FB32010006AC530 /* NativeAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
 		B20118AD1FB32010006AC530 /* NativeAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
+		B21321211FE104CE0028336D /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 		B2B1305A1FA74E8800629CC7 /* TapsellTestv3iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TapsellTestv3iOS.entitlements; sourceTree = "<group>"; };
+		B2BDFF3A1FE119BF009D6360 /* NativeVideoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoTableCell.xib; sourceTree = "<group>"; };
+		B2BDFF3C1FE11B48009D6360 /* NativeVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVideoTableViewCell.h; sourceTree = "<group>"; };
+		B2BDFF3D1FE11B48009D6360 /* NativeVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVideoTableViewCell.m; sourceTree = "<group>"; };
 		B2E6FA611FA49DBB0089D01E /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TapsellSDKv3.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TapsellSDKv3-bcwsdcntuwqlsfayrsxlteqwsdbq/Build/Products/Release-universal/iOS/TapsellSDKv3.framework"; sourceTree = "<group>"; };
+		B2F007BD1FDEBE2400D0062F /* NativeAdListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeAdListController.h; sourceTree = "<group>"; };
+		B2F007BE1FDEBE2400D0062F /* NativeAdListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeAdListController.m; sourceTree = "<group>"; };
+		B2F007C11FDEBE7400D0062F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NativeAdList.storyboard; sourceTree = "<group>"; };
+		B2F007C31FDEDB5C00D0062F /* NativeBannerTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeBannerTableCell.xib; sourceTree = "<group>"; };
+		B2F007C51FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeBannerTableCellTableViewCell.h; sourceTree = "<group>"; };
+		B2F007C61FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeBannerTableCellTableViewCell.m; sourceTree = "<group>"; };
 		B2F1DD131EDC1B39000D9CA4 /* TapsellTestv3iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapsellTestv3iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F1DD171EDC1B39000D9CA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F1DD191EDC1B39000D9CA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,7 +65,6 @@
 		B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F1DD251EDC1B39000D9CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F1DD271EDC1B39000D9CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2F2CABE1FD5A9FB00155489 /* TapsellSDKv3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapsellSDKv3.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F2CABF1FD5A9FB00155489 /* TapsellSDKv3.framework in Frameworks */,
+				B21321221FE104CF0028336D /* TapsellSDKv3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +90,7 @@
 		B2F1DD0A1EDC1B39000D9CA4 = {
 			isa = PBXGroup;
 			children = (
-				B2F2CABE1FD5A9FB00155489 /* TapsellSDKv3.framework */,
+				B21321211FE104CE0028336D /* TapsellSDKv3.framework */,
 				B2F1DD151EDC1B39000D9CA4 /* TapsellTestv3iOS */,
 				B2F1DD141EDC1B39000D9CA4 /* Products */,
 				B2E6FA601FA49DBB0089D01E /* Frameworks */,
@@ -100,8 +115,17 @@
 				B2F1DD1D1EDC1B39000D9CA4 /* ViewController.m */,
 				B20118AC1FB32010006AC530 /* NativeAdViewController.h */,
 				B20118AD1FB32010006AC530 /* NativeAdViewController.m */,
+				B2F007BD1FDEBE2400D0062F /* NativeAdListController.h */,
+				B2F007BE1FDEBE2400D0062F /* NativeAdListController.m */,
 				B2F1DD1F1EDC1B39000D9CA4 /* Main.storyboard */,
 				B20118A91FB31FF0006AC530 /* NativeAd.storyboard */,
+				B2F007C01FDEBE7400D0062F /* NativeAdList.storyboard */,
+				B2F007C51FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.h */,
+				B2F007C61FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.m */,
+				B2F007C31FDEDB5C00D0062F /* NativeBannerTableCell.xib */,
+				B2BDFF3C1FE11B48009D6360 /* NativeVideoTableViewCell.h */,
+				B2BDFF3D1FE11B48009D6360 /* NativeVideoTableViewCell.m */,
+				B2BDFF3A1FE119BF009D6360 /* NativeVideoTableCell.xib */,
 				B2F1DD221EDC1B39000D9CA4 /* Assets.xcassets */,
 				B2F1DD241EDC1B39000D9CA4 /* LaunchScreen.storyboard */,
 				B2F1DD271EDC1B39000D9CA4 /* Info.plist */,
@@ -187,9 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F1DD261EDC1B39000D9CA4 /* LaunchScreen.storyboard in Resources */,
+				B2BDFF3B1FE119BF009D6360 /* NativeVideoTableCell.xib in Resources */,
 				B2F1DD231EDC1B39000D9CA4 /* Assets.xcassets in Resources */,
 				B20118AB1FB31FF0006AC530 /* NativeAd.storyboard in Resources */,
 				B2F1DD211EDC1B39000D9CA4 /* Main.storyboard in Resources */,
+				B2F007C21FDEBE7400D0062F /* NativeAdList.storyboard in Resources */,
+				B2F007C41FDEDB5C00D0062F /* NativeBannerTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,10 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F007BF1FDEBE2400D0062F /* NativeAdListController.m in Sources */,
 				B2F1DD1E1EDC1B39000D9CA4 /* ViewController.m in Sources */,
 				B2F1DD1B1EDC1B39000D9CA4 /* AppDelegate.m in Sources */,
 				B20118AE1FB32010006AC530 /* NativeAdViewController.m in Sources */,
 				B2F1DD181EDC1B39000D9CA4 /* main.m in Sources */,
+				B2F007C71FDEDDA700D0062F /* NativeBannerTableCellTableViewCell.m in Sources */,
+				B2BDFF3E1FE11B48009D6360 /* NativeVideoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +246,14 @@
 				B20118AA1FB31FF0006AC530 /* Base */,
 			);
 			name = NativeAd.storyboard;
+			sourceTree = "<group>";
+		};
+		B2F007C01FDEBE7400D0062F /* NativeAdList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2F007C11FDEBE7400D0062F /* Base */,
+			);
+			name = NativeAdList.storyboard;
 			sourceTree = "<group>";
 		};
 		B2F1DD1F1EDC1B39000D9CA4 /* Main.storyboard */ = {

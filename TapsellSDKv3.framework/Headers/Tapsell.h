@@ -15,6 +15,7 @@
 #import "TapsellAd.h"
 #import "TSNativeBannerAdView.h"
 #import "TSNativeVideoAdView.h"
+#import "TSNativeBannerAdWrapper.h"
 
 @interface Tapsell : NSObject
 
@@ -52,9 +53,11 @@
                              onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
 
 +(void) requestNativeBannerAdForZone:(NSString*_Nullable)zoneId
-                     onAdAvailable:(void (^_Nullable)()) onRequestFilled
+                       onAdAvailable:(void (^_Nullable)(TSNativeBannerAdWrapper* nativeBannerAd)) onRequestFilled
                      onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable
                              onError:(void (^_Nullable)(NSString*_Nullable error)) onError;
++(void) nativeBannerAdShowWithAdId:(NSString*_Nonnull)adId;
++(void) nativeBannerAdClickedWithAdId:(NSString*_Nonnull)adId;
 
 +(void) requestNativeVideoAdForZone:(NSString*_Nonnull )zoneId
                    andContainerView:(TSNativeVideoAdView*_Nullable) nativeVideo

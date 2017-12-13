@@ -10,10 +10,10 @@
 
 @interface TSNativeAdView : UIView
 
-@property(nonatomic, readonly) NSInteger titleLabelTag;
-@property(nonatomic, readonly) NSInteger descriptionLabelTag;
-@property(nonatomic, readonly) NSInteger logoImageTag;
-@property(nonatomic, readonly) NSInteger callToActionButtonTag;
+@property(nonatomic, readwrite) NSInteger titleLabelTag;
+@property(nonatomic, readwrite) NSInteger descriptionLabelTag;
+@property(nonatomic, readwrite) NSInteger logoImageTag;
+@property(nonatomic, readwrite) NSInteger callToActionButtonTag;
 
 -(BOOL) loadTitleIntoLabel:(NSString*)title;
 -(BOOL) loadDescriptionIntoLabel:(NSString*)description;

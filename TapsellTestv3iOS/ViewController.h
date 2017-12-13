@@ -22,5 +22,6 @@
 - (IBAction)requestButtonClicked:(id)sender;
 - (IBAction)showButtonClicked:(id)sender;
 - (IBAction)nativeAdClicked:(id)sender;
+- (IBAction)nativeAdListClicked:(id)sender;
 
 @end

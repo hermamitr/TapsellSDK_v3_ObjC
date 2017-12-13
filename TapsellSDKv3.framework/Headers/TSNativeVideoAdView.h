@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TSNativeAdView.h"
-#import "TSAVPlayerViewController.h"
 
-@interface TSNativeVideoAdView : TSNativeAdView <TSAVPlayerViewControllerDelegate>
+@interface TSNativeVideoAdView : TSNativeAdView
 
-@property(nonatomic, readonly) NSInteger videoViewTag;
+@property(nonatomic, readwrite) NSInteger videoViewTag;
 
 -(void) loadAd:(NSObject*)ad;
 

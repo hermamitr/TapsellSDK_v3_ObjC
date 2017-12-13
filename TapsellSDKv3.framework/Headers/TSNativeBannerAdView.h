@@ -11,7 +11,7 @@
 
 @interface TSNativeBannerAdView : TSNativeAdView
 
-@property(nonatomic, readonly) NSInteger mainImageTag;
+@property(nonatomic, readwrite) NSInteger mainImageTag;
 
 -(void) loadAd:(NSObject*)ad;
 
