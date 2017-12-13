@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TapsellSDKv3/TapsellSDKv3.h>
 
 @interface NativeAdListController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 - (IBAction)onBackClicked:(id)sender;

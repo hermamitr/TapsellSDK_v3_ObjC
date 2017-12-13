@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TSNativeAdView.h"
+#import "TSNativeVideoBundle.h"
 
 @interface TSNativeVideoAdView : TSNativeAdView
 
+@property(nonatomic, strong, readonly) TSNativeVideoBundle* bundle;
 @property(nonatomic, readwrite) NSInteger videoViewTag;
 
--(void) loadAd:(NSObject*)ad;
-
+-(BOOL) loadAd:(NSObject*)ad;
+-(TSNativeVideoBundle*) getBundle;
+-(void) fillWithBundle:(TSNativeVideoBundle*)bundle;
 @end
