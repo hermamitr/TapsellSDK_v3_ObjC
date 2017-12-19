@@ -30,7 +30,7 @@
     
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
-    [Tapsell initializeWithAppKey:@"rashssjnjiaeqqeihgjdsihajkbkqgeqqdoftpafmlcoofdflejgmttlercbsdfbnjnjqs" andConfig:config];
+    [Tapsell initializeWithAppKey:@"nmgaencpajlfecantijkeejrllkbqjokmtfaqgahbgbefhghhmorknlqotlbeaoolbgger" andConfig:config];
  
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
@@ -54,7 +54,7 @@
         [self.btnRequestAd setTitle:@"Fetching..." forState:UIControlStateNormal];
         TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
         [requestOptions setCacheType:CacheTypeStreamed];
-        [Tapsell requestAdForZone:@"586e4ed1bc5c28712bd8d50c"
+        [Tapsell requestAdForZone:@"5a326023d005ec0001199256"
                        andOptions:requestOptions
                     onAdAvailable:^(TapsellAd *ad){
                         NSLog(@"AdAvailable");
