@@ -26,12 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.bannerAdView loadAdWithZoneId:@"59a27ab94684655433e74ef8" andBannerType:BANNER_250x250];
-    
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
-    [Tapsell initializeWithAppKey:@"nmgaencpajlfecantijkeejrllkbqjokmtfaqgahbgbefhghhmorknlqotlbeaoolbgger" andConfig:config];
- 
+    [Tapsell initializeWithAppKey:@"qjmospqbfarbhodregqecbbnfhcjllkflpbpsmdrtpqkapdeptftldfiapfgbamkhalbij" andConfig:config];
+    [self.bannerAdView loadAdWithZoneId:@"5a44aa6565a77100013d5fb3" andBannerType:[NSNumber numberWithInteger:BANNER_320x50]];
     //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
     //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
     [self.btnShowAd setHidden:YES];
@@ -54,7 +52,7 @@
         [self.btnRequestAd setTitle:@"Fetching..." forState:UIControlStateNormal];
         TSAdRequestOptions* requestOptions = [[TSAdRequestOptions alloc] init];
         [requestOptions setCacheType:CacheTypeStreamed];
-        [Tapsell requestAdForZone:@"5a326023d005ec0001199256"
+        [Tapsell requestAdForZone:@"59b4d07d468465281b792cb7"
                        andOptions:requestOptions
                     onAdAvailable:^(TapsellAd *ad){
                         NSLog(@"AdAvailable");

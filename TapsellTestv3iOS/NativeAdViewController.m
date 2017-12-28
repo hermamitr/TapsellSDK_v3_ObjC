@@ -44,7 +44,7 @@
     [_nativeVideo setHidden:YES];
     [_nativeBanner setHidden:NO];
     NSLog(@"request banner ad");
-    [Tapsell requestNativeBannerAdForZone:@"5a291e3edc93ee00017fad23"
+    [Tapsell requestNativeBannerAdForZone:@"59c8a9334684656c504f0e19"
                          andContainerView:_nativeBanner
                           onRequestFilled:^(void) {
                               NSLog(@"onRequestFilled native banner ad");
@@ -61,7 +61,7 @@
         NSLog(@"request video ad");
         [_nativeVideo setHidden:NO];
         [_nativeBanner setHidden:YES];
-        [Tapsell requestNativeVideoAdForZone:@"5a28eeffd005ec0001b386c6"
+        [Tapsell requestNativeVideoAdForZone:@"59c8ae514684656c504fce40"
                             andContainerView:_nativeVideo
                              onRequestFilled:^(void) {
                                  NSLog(@"onRequestFilled native video ad");

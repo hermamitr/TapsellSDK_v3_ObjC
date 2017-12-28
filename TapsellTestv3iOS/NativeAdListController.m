@@ -28,7 +28,7 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NativeBannerTableCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
     _nativeBanner = cell.nativeBanner;
-    [Tapsell requestNativeBannerAdForZone:@"5a291e3edc93ee00017fad23"
+    [Tapsell requestNativeBannerAdForZone:@"59c8a9334684656c504f0e19"
                          andContainerView:_nativeBanner
                           onRequestFilled:^(void) {
                               NSLog(@"onRequestFilled native banner ad");
@@ -45,7 +45,7 @@
     NSArray *nibV = [[NSBundle mainBundle] loadNibNamed:@"NativeVideoTableCell" owner:self options:nil];
     cellV = [nibV objectAtIndex:0];
     _nativeVideo = cellV.nativeVideo;
-    [Tapsell requestNativeVideoAdForZone:@"5a28eeffd005ec0001b386c6"
+    [Tapsell requestNativeVideoAdForZone:@"59c8ae514684656c504fce40"
                         andContainerView:cellV.nativeVideo
                          onRequestFilled:^(void) {
                              NSLog(@"onRequestFilled native banner ad");

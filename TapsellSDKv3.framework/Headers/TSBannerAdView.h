@@ -18,9 +18,9 @@ typedef enum BannerType : NSInteger {
 @protocol TSBannerAdDelegate;
 
 @interface TSBannerAdView : UIWebView <UIWebViewDelegate>
-    @property (assign, nonatomic) BannerType bannerType;
-    @property (assign, nonatomic) NSString* zoneId;
--(void) loadAdWithZoneId:(NSString*)zoneId andBannerType:(BannerType)bannerType;
+    @property (nonatomic, strong) NSNumber* bannerType;
+    @property (nonatomic, strong) NSString* zoneId;
+-(void) loadAdWithZoneId:(NSString*)zoneId andBannerType:(NSNumber*)bannerType;
 
     @property (nonatomic, weak) id<TSBannerAdDelegate> bannerDelegate;
 @end

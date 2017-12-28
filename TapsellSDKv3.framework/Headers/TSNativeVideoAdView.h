@@ -18,4 +18,5 @@
 -(BOOL) loadAd:(NSObject*)ad;
 -(TSNativeVideoBundle*) getBundle;
 -(void) fillWithBundle:(TSNativeVideoBundle*)bundle;
+-(void) fillVideoView:(NSString*)adId withUrl:(NSString*)videoUrl;
 @end
