@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <TapsellSDKv3/TapsellSDKv3.h>
 
-@interface ViewController : UIViewController <TSBannerAdDelegate>
+@interface ViewController : UIViewController <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet TSNativeBannerAdView *nativeBanner;
 
 // connect TSBannerAdView outlet

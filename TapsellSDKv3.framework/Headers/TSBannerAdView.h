@@ -15,20 +15,16 @@ typedef enum BannerType : NSInteger {
     BANNER_300x250=4
 } BannerType;
 
-@protocol TSBannerAdDelegate;
-
 @interface TSBannerAdView : UIWebView <UIWebViewDelegate>
     @property (nonatomic, strong) NSNumber* bannerType;
     @property (nonatomic, strong) NSString* zoneId;
--(void) loadAdWithZoneId:(NSString*)zoneId andBannerType:(NSNumber*)bannerType;
+    @property (nonatomic, strong) void (^onRequestFilled)(void);
+    @property (nonatomic, strong) void (^onHiddenBannerClicked)(void) ;
+    @property (nonatomic, strong) void (^onNoAdAvailable)(void);
+-(void) loadAdWithZoneId:(NSString*)zoneId andBannerType:(NSNumber*)bannerType
+         onRequestFilled:(void (^_Nullable)()) onRequestFilled
+     onHideBannerClicked:(void (^_Nullable)()) onHideBannerClicked
+         onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable;
 
-    @property (nonatomic, weak) id<TSBannerAdDelegate> bannerDelegate;
 @end
 
-@protocol TSBannerAdDelegate <NSObject>
-
--(void) tsBannerAdHideBannerAdView;
-
--(void) tsBannerAdNoAdAvailable;
--(void) tsBannerAdOnRequestFilled;
-@end

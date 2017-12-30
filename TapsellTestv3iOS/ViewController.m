@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 
 - (void)viewDidLoad {
@@ -29,9 +29,16 @@
     TSConfiguration* config = [[TSConfiguration alloc] init];
     [config setDebugMode:YES];
     [Tapsell initializeWithAppKey:@"qjmospqbfarbhodregqecbbnfhcjllkflpbpsmdrtpqkapdeptftldfiapfgbamkhalbij" andConfig:config];
-    [self.bannerAdView loadAdWithZoneId:@"5a44aa6565a77100013d5fb3" andBannerType:[NSNumber numberWithInteger:BANNER_320x50]];
-    //NSString* vastUrl = [TapsellVAST getVastUrlForZone:@"5913110746846551e1340acf" withType:PrerollTypeShort ofVastVersion:VAST3];
-    //NSLog(@"%@", [NSString stringWithFormat:@"vastUrl: %@",vastUrl]);
+    [self.bannerAdView loadAdWithZoneId:@"5a44aa6565a77100013d5fb3" andBannerType:[NSNumber numberWithInteger:BANNER_320x50]
+                        onRequestFilled:^{
+                            NSLog(@"BANNER_AD: Banner ad filled");
+                        }
+                    onHideBannerClicked:^{
+                        NSLog(@"BANNER_AD: Banner Ad view is hidden!");
+                    }
+                        onNoAdAvailable:^{
+                            NSLog(@"BANNER_AD: No Banner Ad Available");
+                        }];
     [self.btnShowAd setHidden:YES];
     self.btnRequestAd.titleLabel. numberOfLines = 0; // Dynamic number of lines
     self.btnRequestAd.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -56,7 +63,6 @@
                        andOptions:requestOptions
                     onAdAvailable:^(TapsellAd *ad){
                         NSLog(@"AdAvailable");
-//                        NSLog([ad getId]);
                         self.tapsellAd = ad;
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             
@@ -125,17 +131,10 @@
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
--(void) tsBannerAdNoAdAvailable {
-    NSLog(@"BANNER_AD: No Banner Ad Available");
-}
-
--(void) tsBannerAdHideBannerAdView {
-    NSLog(@"BANNER_AD: Banner Ad view is hidden!");
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
