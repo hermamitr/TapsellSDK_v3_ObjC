@@ -25,6 +25,7 @@ typedef enum BannerType : NSInteger {
          onRequestFilled:(void (^_Nullable)()) onRequestFilled
      onHideBannerClicked:(void (^_Nullable)()) onHideBannerClicked
          onNoAdAvailable:(void (^_Nullable)()) onNoAdAvailable;
-
++ (void) loadAdWithZoneId:(NSString*)zoneId andBannerType:(NSNumber*)bannerType
+          andHorizGravity:(NSNumber*)horiz andVertGravity:(NSNumber*)vert;
 @end
 
